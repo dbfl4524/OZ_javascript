@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1회차 과제</title>
+  </head>
+  <body>
+    <h1 id="name"></h1>
+    <p id="pet"></p>
+    <p id="fruit"></p>
+
+    <script>
+      const nameElement = document.querySelector('#name');
+      let name = prompt('당신의 이름은?');
+      nameElement.textContent = name;
+
+      const petElement = document.querySelector('#pet');
+      let pet = prompt('좋아하는 동물은?');
+      petElement.textContent = pet;
+
+      const fruitElement = document.querySelector('#fruit');
+      let fruit = prompt('좋아하는 과일은?');
+      fruitElement.textContent = fruit;
+    </script>
+  </body>
+</html>
