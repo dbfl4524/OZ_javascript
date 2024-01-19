@@ -1,0 +1,48 @@
+body {
+  width: 800px;
+  height: 1000px;
+  padding: 30px 30px;
+  margin: 10px;
+}
+.container {
+  background-color: rgb(235, 245, 221);
+  width: 500px;
+  height: 700px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 80px;
+  box-shadow: 10px 15px 0px 5px rgb(122, 197, 122), 20px 35px 0px 5px orange, 30px 45px 0px 5px green,
+    40px 55px 0px 5px tomato;
+}
+h2 {
+  padding-left: 70px;
+}
+.number {
+  text-align: end;
+  margin: 10px 20px;
+}
+.phone {
+  width: 80px;
+  height: 35px;
+  margin: 4px 6px;
+}
+.gender {
+  text-align: center;
+  margin: 4px;
+}
+.info {
+  width: 310px;
+  height: 35px;
+  margin: 4px;
+}
+select {
+  width: 310px;
+  height: 35px;
+  margin: 15px;
+}
+.btn {
+  width: 310px;
+  height: 40px;
+  margin: 5px;
+  background-color: white;
+}

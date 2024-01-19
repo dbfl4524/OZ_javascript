@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다크모드 만들기</title>
+    <style></style>
+  </head>
+  <body>
+    <button id="btn1">white</button>
+    <button id="btn2">black</button>
+    <script>
+      const whiteBtn = document.getElementById('btn1');
+      const blackBtn = document.getElementById('btn2');
+
+      whiteBtn.addEventListener('click', function () {
+        document.body.style.backgroundColor = 'white';
+      });
+      blackBtn.addEventListener('click', function () {
+        document.body.style.backgroundColor = 'black';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>캐러셀</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        width: 300vw;
+        transition: transform 0.6s;
+      }
+      .pic {
+        width: 100vw;
+        float: left;
+      }
+      .pic img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pic"><img src="imges/IMG1.jpeg" /></div>
+      <div class="pic"><img src="imges/IMG2.jpeg" /></div>
+      <div class="pic"><img src="imges/IMG3.jpeg" /></div>
+    </div>
+    <button class="back">배경</button>
+    <button class="버튼1">화</button>
+    <button class="버튼2">이</button>
+    <button class="버튼3">팅</button>
+    <button class="버튼4">다음</button>
+
+    <script>
+      // 버튼을 누르면 tranform: translate(-100vw) 오른쪽으로 이동
+      document.querySelector('.버튼2').addEventListener('click', function () {
+        document.querySelector('.container').style.transform = 'translate(-100vw)';
+      });
+      document.querySelector('.버튼3').addEventListener('click', function () {
+        document.querySelector('.container').style.transform = 'translate(-200vw)';
+      });
+      document.querySelector('.버튼1').addEventListener('click', function () {
+        document.querySelector('.container').style.transform = 'translate(0vw)';
+      });
+      const back = document.querySelector('.back');
+      back.addEventListener('click', function () {
+        document.body.style.backgroundColor = 'black';
+      });
+
+      let index = 0;
+
+      const nexBtn = document.querySelector('.버튼4');
+
+      nexBtn.addEventListener('click', () => {
+        if (index === 2) return;
+        index += 1;
+
+        document.querySelector('.container').style.transform = `translate3d(-${100 * index}vw,0,0`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE-edge" />
+    <title>CSS를 이용한 회원가입 폼 만들기</title>
+    <link href="ch3-3.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>OZ초격차 회원가입</h2>
+      <form id="form" action="#">
+        <div class="join">
+          <input type="email" id="email" class="info" placeholder="이메일을 입력하세요." name="eMail" />
+          <input type="text" id="name" class="info" placeholder="이름을 입력하세요." name="nAme" />
+          <input type="password" id="pw" class="info" placeholder="비밀번호를 입력하세요." name="pw1" />
+          <input class="info" type="password" id="repw" placeholder="비밀번호를 다시 입력하세요." name="pw2" />
+          <input type="tel" class="phone" id="p1" placeholder="010" name="ph1" />-
+          <input type="tel" class="phone" id="p2" placeholder="1234" name="ph2" />-
+          <input type="tel" class="phone" id="p3" placeholder="5678" name="ph3" />
+        </div>
+        <div class="number">
+          000000
+          <button id="button">인증번호 전송</button>
+          <br />
+          3:00
+          <button id="button2">인증 완료</button>
+        </div>
+        <select id="join">
+          <option>-지역을 선택하세요-</option>
+        </select>
+        <div class="gender">
+          <input type="radio" id="woman" />
+          <label for="woman">여성</label>
+          <input type="radio" id="man" />
+          <label for="man">남성</label>
+        </div>
+        <div class="join button">
+          <input type="submit" value="가입하기" class="btn" title="가입하기" />
+        </div>
+      </form>
+    </div>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+
+    <script src="ch3-3.js"></script>
+  </body>
+</html>
