@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문-성적표</title>
+  </head>
+  <div id="container"></div>
+  <body>
+    <script>
+      const score = parseInt(prompt('중간고사 점수를 입력하세요.'));
+
+      if (score >= 90) {
+        const A = document.createElement('p');
+        A.textContent = `나의 기말고사 점수는 ${score} 학점은 A !!!`;
+        container.append(A);
+      } else if (score >= 80) {
+        const B = document.createElement('p');
+        B.textContent = `나의 기말고사 점수는 ${score} 학점은 B !!!`;
+        container.append(B);
+      } else if (score >= 70) {
+        const C = document.createElement('p');
+        C.textContent = `나의 기말고사 점수는 ${score} 학점은 C !!!`;
+        container.append(C);
+      } else if (score >= 60) {
+        const D = document.createElement('p');
+        D.textContent = `나의 기말고사 점수는 ${score} 학점은 D !!!`;
+        container.append(D);
+      } else {
+        const F = document.createElement('p');
+        F.textContent = `나의 기말고사 점수는 ${score} 학점은 F !!!`;
+        container.append(F);
+      }
+    </script>
+  </body>
+</html>
