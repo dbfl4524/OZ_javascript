@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>별트리 찍기</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="star1"></div>
+    <div id="star2"></div>
+    <div id="star3"></div>
+    <script>
+      const div = document.getElementById('container');
+      const h1 = document.createElement('h1');
+      h1.textContent = '별트리 찍기';
+      div.appendChild(h1);
+
+      document.write('1번 별<br>');
+      for (i = 0; i < 5; i++) {
+        for (j = 0; j <= i; j++) {
+          document.write(`*`);
+        }
+        document.write('<br>');
+      }
+
+      document.write('2번 별<br>');
+      // 2번 별
+      for (i = 0; i < 5; i++) {
+        for (j = 0; j <= i; j++) {
+          document.write(`*`);
+        }
+        document.write('<br>');
+      }
+      for (i = 0; i < 5; i++) {
+        for (j = 5; j > i; j--) {
+          document.write('*');
+        }
+        document.write('<br>');
+      }
+
+      document.write('3번 별<br>');
+      for (let i = 0; i < 5; i++) {
+        for (let j = 4; j > i; j--) {
+          document.write('&nbsp');
+        }
+        for (let j = 0; j <= i; j++) {
+          document.write('*');
+        }
+        for (let j = 1; j <= i; j++) {
+          document.write('*');
+        }
+
+        document.write('<br>');
+      }
+
+      for (let i = 0; i < 4; i++) {
+        for (let j = 0; j <= i; j++) {
+          document.write('&nbsp');
+        }
+        for (let j = 4; j > i; j--) {
+          document.write('*');
+        }
+        for (let j = 3; j > i; j--) {
+          document.write('*');
+        }
+        document.write('<br>');
+      }
+    </script>
+  </body>
+</html>

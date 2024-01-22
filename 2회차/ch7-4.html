@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미스테리 숫자 맞추기</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mystery Number 맞추기</h1>
+    <div id="container">
+      <p>1부터 100사이의 숫자를 입력하세요!</p>
+      <input type="text" id="text" />
+      <input type="button" value="뚜둥!" id="button" />
+    </div>
+    <script>
+      const div = document.getElementById('container');
+      const numText = document.getElementById('text');
+      const buttOn = document.getElementById('button');
+      const ranDom = Math.floor(Math.random() * 101);
+
+      buttOn.addEventListener('click', function () {
+        let input = numText.value;
+        if (input < ranDom) {
+          const a = document.createElement('p');
+          a.textContent = '힌트: 숫자가 너무 작아요! 조금 더 높여보세요';
+          div.appendChild(a);
+        } else if (input > ranDom) {
+          const b = document.createElement('p');
+          b.textContent = '힌트: 숫자가 커요! 줄여볼까요?!';
+          div.appendChild(b);
+        } else {
+          let answer = alert('정답입니다.');
+        }
+      });
+    </script>
+  </body>
+</html>
