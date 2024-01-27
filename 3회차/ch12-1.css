@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 287px;
+  border: 1px solid #333;
+  background-color: skyblue;
+  padding: 5px;
+  font-size: 20px;
+  display: flex;
+}
+.container form {
+  display: grid;
+  grid-template-columns: repeat(4, 65px); /* grid 에 열 갯수 4 , 1개 네모칸에 사이즈 가로 65px */
+  grid-auto-rows: 65px; /* 1개 네모칸 세로 65px */
+  grid-gap: 5px;
+}
+.container form input[type='text'] {
+  text-align: right;
+  padding: 0 10px;
+}
+.container form input {
+  border: 2px solid #333;
+  cursor: pointer;
+}
+.container form input:hover {
+  box-shadow: 1px 1px 2px #333;
+  background-color: bisque;
+}
+.container form input[type='text'] {
+  grid-column: span 4;
+}
