@@ -22,7 +22,7 @@ function question(n, m) {
   // 여기에서 코드 작성해주세요!
   let result;
   for (i = 1; i <= 10; i++) {
-    let j = Math.floor(Math.random() * 10) + 1;
+    let j = Math.floor(Math.random() * 9) + 1;
     if (i === n) {
       console.log(`${i}회차 행운의 숫자 : ${j} 당첨!`);
     } else if (i !== n) {
