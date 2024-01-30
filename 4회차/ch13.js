@@ -21,6 +21,14 @@
 function question(n, m) {
   // 여기에서 코드 작성해주세요!
   let result;
+  for (i = 1; i <= 10; i++) {
+    let j = Math.floor(Math.random() * 10) + 1;
+    if (i === n) {
+      console.log(`${i}회차 행운의 숫자 : ${j} 당첨!`);
+    } else if (i !== n) {
+      console.log(`${i}회차 행운의 숫자 : ${j} 꽝!`);
+    }
+  }
+  console.log(`당청금은 ${m} 입니다.`);
 }
-
 question(4, 10000);
