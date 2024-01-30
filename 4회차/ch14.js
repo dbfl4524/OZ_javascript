@@ -17,6 +17,12 @@
 function question(n) {
   // 여기에서 코드 작성해주세요!
   let result;
+  for (let i = 0; i < n; i++) {
+    if (n % i === 1) {
+      result = i;
+      break;
+    }
+  }
 
   return result;
 }
