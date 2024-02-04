@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가위바위보 게임</title>
+  </head>
+  <body>
+    <h1>가위바위보 게임</h1>
+    <div>가위,바위,보 중 하나를 입력하세요.</div>
+    <br />
+    <input id="talk" type="text" />
+    <input id="push" type="button" value="결과확인" />
+
+    <script>
+      const input = document.getElementById('talk');
+      const button = document.getElementById('push');
+
+      button.addEventListener('click', function () {
+        const p = document.createElement('p');
+        const rdNum = Math.floor(Math.random() * 3);
+
+        if (rdNum == 0) {
+          comPrn = '가위';
+        } else if (rdNum == 1) {
+          comPrn = '바위';
+        } else {
+          comPrn = '보';
+        }
+
+        if (input.value == comPrn) {
+          result = '비겼습니다.';
+        } else if (
+          (input.value == '가위' && comPrn == '보') ||
+          (input.value == '바위' && comPrn == '가위') ||
+          (input.value == '보' && comPrn == '주먹')
+        ) {
+          result = '이겼습니다.';
+        } else {
+          result = '졌습니다.';
+        }
+
+        p.textContent = `당신의 선택 :${input.value} ,  컴퓨터의 선택 : ${comPrn},  결과 : ${result}`;
+        document.body.append(p);
+      });
+    </script>
+  </body>
+</html>

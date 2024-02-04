@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아이스크림 추가 및 나열</title>
+  </head>
+  <body>
+    <input type="button" value="아이스크림 종류 추가" id="type" />
+    <input type="button" value="아이스크림 이름 출력" id="name" />
+    <input type="button" value="아이스크림 목록 출력" id="List" />
+    <h3>입력한 아이스크림 목록 :</h3>
+    <div id="arrList"></div>
+
+    <script>
+      const typeBtn = document.getElementById('type');
+      const nameBtn = document.getElementById('name');
+      const ListBtn = document.getElementById('List');
+
+      let inputList = [];
+
+      typeBtn.addEventListener('click', function () {
+        let answer = prompt('당신이 좋아하는 아이스크림은?');
+        inputList.push(answer);
+      });
+      nameBtn.addEventListener('click', function () {
+        let i = 0;
+        do {
+          // do..while 문법은 조건이 truthy 인지 아닌지에 상관없이, 본문을 최소한 한 번이라도 실행하고 싶을 때만 사용
+          alert(inputList[i]);
+          i++;
+        } while (i > 3);
+      });
+      ListBtn.addEventListener('click', function () {
+        let choic = document.createElement('h3');
+        choic.textContent = inputList;
+        document.body.append(choic);
+      });
+    </script>
+  </body>
+</html>
